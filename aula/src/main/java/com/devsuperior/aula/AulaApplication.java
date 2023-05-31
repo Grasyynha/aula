@@ -1,11 +1,19 @@
 package com.devsuperior.aula;
 
+import com.devsuperior.entities.Employee;
+import com.devsuperior.services.SalaryService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan({"com.devsuperior"})
 public class AulaApplication implements CommandLineRunner {
+
+    @Autowired
+	private SalaryService salaryService;
 
 	public static void main(String[] args) {
 
@@ -14,7 +22,9 @@ public class AulaApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("Ola mundo");
+		Employee employee = new Employee("Maria", 4000.0);
+		System.out.println(salaryService.netSalary(employee));
 
 	}
 }
+
