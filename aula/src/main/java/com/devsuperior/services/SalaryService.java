@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 public class SalaryService {
 
     @Autowired
-    private com.devsuperior.aulaspring.services.TaxService taxService;
+    private com.devsuperior.services.TaxService taxService;
 
     @Autowired
     private PensionService pensionService;
