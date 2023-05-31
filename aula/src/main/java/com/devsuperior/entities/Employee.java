@@ -1,26 +1,17 @@
-package entities;
-
+package com.devsuperior.entities;
 public class Employee {
 
-    private Integer id;
+
     private String name;
-    private Double salary;
+    private Double grossSalary;
 
     public Employee() {
     }
 
-    public Employee(Integer id, String name, Double salary) {
-        this.id = id;
+    public Employee(String name, double grossSalary) {
+
         this.name = name;
-        this.salary = salary;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
+        this.grossSalary = grossSalary;
     }
 
     public String getName() {
@@ -31,19 +22,14 @@ public class Employee {
         this.name = name;
     }
 
-    public Double getSalary() {
-        return salary;
+    public Double getGrossSalary() {
+        return grossSalary;
     }
 
-    public void setSalary(Double salary) {
-        this.salary = salary;
-    }
-
-    public void increaseSalary(double percentage) {
-        salary += salary * percentage / 100.0;
-    }
-
-    public String toString() {
-        return id + ", " + name + ", " + String.format("%.2f", salary);
+    public void setGrossSalary(Double grossSalary) {
+        this.grossSalary = grossSalary;
     }
 }
+
+
+

@@ -1,6 +1,12 @@
-package com.devsuperior.aulaspring.services;
+package com.devsuperior.services;
 
-public interface TaxService {
+import org.springframework.stereotype.Service;
 
-    double tax(double amount);
+@Service
+public class  TaxService {
+
+    public double tax(double amount){
+        return  amount * 0.2;
+    }
 }
+
